@@ -1,2 +1,2 @@
-export const BASE_URL = "http://localhost:3000";
-export const APP_NAME = "F-Network";
+export const BASE_URL = "https://n-chatti.herokuapp.com/";
+export const APP_NAME = "N-HATTI";

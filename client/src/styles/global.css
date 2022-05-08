@@ -185,7 +185,7 @@ a {
     top   : auto;
   } */
   .header .menu .dropdown .dropdown-menu.notif {
-    transform : translateX(90px);
+    transform : translateX(104px);
     margin-top: 5px;
   }
 
