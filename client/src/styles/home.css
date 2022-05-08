@@ -1,0 +1,141 @@
+/* status */
+.status {
+    background-color: #fff;
+    box-shadow      : 0 0 5px #ddd;
+    padding         : 10px;
+    border-radius   : 10px;
+}
+
+.status .statusBtn {
+    background   : #f1f1f1;
+    border       : none;
+    outline      : none;
+    border-radius: 30px;
+    color        : #555;
+    padding      : 0 10px;
+    text-align   : left;
+    margin       : 7px;
+}
+
+.status .statusBtn:hover {
+    background: #ddd
+}
+
+/* =========post========== */
+
+.post .card {
+    box-shadow: 0 0 5px #ddd;
+}
+
+/* =========post card========== */
+
+.post .card .card_header {
+    display           : flex;
+    justify-content   : space-between;
+    /* align-items    : center; */
+    cursor            : pointer;
+    padding           : 15px 25px;
+}
+
+
+.post .card .card_name {
+    transform: translateY(3px);
+}
+
+.post .card .card_name h6 {
+    line-height: 0rem;
+}
+
+.post .card .card_header .dropdown-menu {
+    position: absolute;
+    right   : 0;
+    left    : inherit
+}
+
+.post .card .card_header .dropdown-item {
+    display    : flex;
+    margin     : 5px 0;
+    align-items: center;
+    font-size  : 13px;
+}
+
+.post .card .card_header .dropdown-item i {
+    margin-right: 5px;
+    font-size   : 14px;
+}
+
+.post .card .card_body .carousel {
+    max-height: 350px !important;
+    height    : 400px;
+
+}
+
+.post.post_detail_page .card .card_body .carousel {
+    max-height: 75vh !important;
+    height    : 75vh;
+}
+
+.post .card .card_body .carousel-inner,
+.post .card .card_body .carousel-inner .carousel-item {
+    height    : 100%;
+    background: #0008;
+}
+
+.post .card .card_body .carousel-inner img {
+    object-fit     : none;
+    object-position: center;
+    height         : 100%;
+    width          : 100%;
+}
+
+
+.carousel-control-next,
+.carousel-control-prev {
+    width: 30px !important;
+}
+
+/* =========post card body========== */
+
+.post .card_body_content {
+    padding      : 0 25px;
+    margin-top   : -10px;
+    margin-bottom: 10px;
+}
+
+.post .card_body_content .readMore {
+    color : crimson;
+    cursor: pointer;
+}
+
+
+/* =========post card footer========== */
+
+.post .card_icon_menu {
+    display        : flex;
+    justify-content: space-between;
+    padding        : 0 15px;
+    cursor         : pointer;
+
+}
+
+.post .card_icon_menu i {
+    font-size: 28px;
+    margin   : 10px;
+    opacity  : .8;
+
+}
+
+.post .card_icon_menu img {
+    width    : 27px;
+    height   : 27px;
+    transform: translate(5px, -6px);
+    opacity  : .8;
+}
+
+@media (max-width:786px) {
+    .post .card .card_body .carousel-inner img {
+        object-fit: cover !important;
+        height    : 100%;
+        width     : 100%;
+    }
+}

@@ -1,0 +1,28 @@
+.login_page {
+  width          : 100%;
+  min-height     : 100vh;
+  background     : #fdfdfd;
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+}
+
+.login_page form {
+  background: var(--white);
+  max-width : 400px;
+  width     : 100%;
+  border    : 1px solid #ddd;
+  padding   : 50px 20px;
+}
+
+.login_page .pass {
+  position: relative;
+}
+
+.login_page .pass small {
+  position : absolute;
+  top      : 50%;
+  right    : 5px;
+  transform: translateY(-50%);
+  opacity  : 05;
+}

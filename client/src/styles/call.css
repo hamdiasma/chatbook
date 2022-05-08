@@ -1,0 +1,113 @@
+.call_model {
+    position  : fixed;
+    top       : 0;
+    left      : 0;
+    z-index   : 10;
+    background: #0008;
+    width     : 100%;
+
+    height         : 100vh;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+}
+
+.call_box {
+    width          : 100%;
+    max-width      : 400px;
+    background     : darkblue;
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
+    justify-content: center;
+    color          : var(--white);
+    padding        : 50px 0;
+    border-radius  : 5px;
+    box-shadow     : 0 0 5px darkblue;
+}
+
+.call_box h4,
+.call_box h6 {
+    margin-top: 5px;
+}
+
+.call_model .call_menu {
+    margin-top     : 20px;
+    min-width      : 260px;
+    width          : 100%;
+    display        : flex;
+    justify-content: space-around;
+}
+
+
+
+
+.call_model .call_menu i {
+    font-size       : 1.6rem;
+    height          : 60px;
+    width           : 60px;
+    background      : #d8d6d65e;
+    line-height     : 60px;
+    text-align      : center;
+    border-radius   : 50%;
+    transition      : all .3s ease-in-out;
+    padding         : 1px;
+    cursor          : pointer;
+    /* border       : 1px solid #f6f8f9; */
+}
+
+.call_model .call_menu i:hover {
+    background: #d8d6d630;
+}
+
+
+.call_model .show_video {
+    position      : fixed;
+    top           : 0;
+    left          : 0;
+    width         : 100%;
+    height        : 100vh;
+    pointer-events: none;
+
+}
+
+.call_model .show_video .your_video {
+    position     : absolute;
+    top          : 0;
+    right        : 0;
+    width        : 300px;
+    max-height   : 250px;
+    border-radius: 5px;
+    border       : 1px solid crimson;
+    z-index      : 11;
+}
+
+.call_model .show_video .other_video {
+    width : 100%;
+    height: 100%;
+}
+
+.call_model .show_video i.end_call {
+    position      : absolute;
+    bottom        : 100px;
+    left          : 50%;
+    transform     : translateX(-50%);
+    pointer-events: initial;
+    color         : white;
+    cursor        : pointer;
+    z-index       : 11;
+}
+
+/* 
+.call_model .show_video i.end_call:hover {
+    background: #555;
+} */
+
+.call_model .show_video .timer.time_video {
+    position      : absolute;
+    bottom        : 170px;
+    left          : 50%;
+    transform     : translateX(-50%);
+    pointer-events: inherit;
+    color         : var(--white);
+}
