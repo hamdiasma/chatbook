@@ -6,7 +6,7 @@ import { alertTypes, globalTypes } from "../../redux/type/types";
 import { stopTracks } from "../../utils/tracks";
 import { timer } from "../../utils/timer";
 import { addMessageAction } from "../../redux/actions/message";
-import audioRingRecip from "../../audio/facebook_call.mp3";
+import audioRingRecip from "../../audio/ringring.mp3";
 
 function CallModel() {
   const { call, auth, theme, peer, socket } = useSelector((state) => state);
@@ -110,18 +110,17 @@ function CallModel() {
   // answer call
   const handleAnsware = () => {
     openStream(call.video).then((stream) => {
-      if (youVideo.current) {
-        playStream(youVideo.current, stream);
-      }
+      playStream(youVideo.current, stream);
 
       const track = stream.getTracks();
       setTracks(track);
+
       const newCall = peer.call(call.peerId, stream);
-      newCall.on("stream", function (remoteStream) {
-        if (otherVideo.current) {
+
+      newCall &&
+        newCall.on("stream", function (remoteStream) {
           playStream(otherVideo.current, remoteStream);
-        }
-      });
+        });
 
       setAnswer(true);
       setNewcall(newCall);
@@ -171,18 +170,7 @@ function CallModel() {
       });
     });
     return () => socket.off("callerDisconnect");
-  }, [
-    dispatch,
-    socket,
-    tracks,
-    call,
-    call.username,
-    call.fullname,
-    addCallMsg,
-    answer,
-    total,
-    newCall,
-  ]);
+  }, [dispatch, socket, tracks, call, addCallMsg, answer, total, newCall]);
   // play && pause audio
 
   const playAudio = (newAudio) => {
@@ -192,6 +180,7 @@ function CallModel() {
     newAudio.pause();
     newAudio.currentTime = 0;
   };
+
   useEffect(() => {
     let newAudio = new Audio(audioRingRecip);
     if (answer) {

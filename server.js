@@ -15,7 +15,6 @@ app.use(cookieParse());
 // socket
 const http = require("http").createServer(app);
 const io = require("socket.io")(http);
-const user = [];
 io.on("connection", (socket) => {
   SocketServer(socket);
 });

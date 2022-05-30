@@ -11,13 +11,12 @@ function Toast({ msg, handelSHow, bgColor }) {
     >
       <div className={`toast-header text-light ${bgColor}`}>
         <strong className="me-auto text-light">Alert..!</strong>
-        <small>11 mins ago</small>
         <button
           type="button"
           className="btn-close"
           data-bs-dismiss="toast"
           aria-label="Close"
-          style={{ outline: "none" }}
+          style={{ outline: "none", color: "crimson" }}
           onClick={handelSHow}
         ></button>
       </div>

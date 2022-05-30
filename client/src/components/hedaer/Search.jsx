@@ -4,7 +4,7 @@ import { alertAction } from "../../redux/actions/alert";
 import { getData } from "../../utils/fetchData";
 import { lowerText } from "../../utils/lowerCasetext";
 import UserCard from "../card/UserCard";
-
+import LoadingImg from "../../images/loading.gif";
 function Search() {
   const [search, setSearch] = useState("");
   const [users, setUsers] = useState([]);
@@ -46,8 +46,9 @@ function Search() {
       <input
         className={theme ? "search-darck" : "search-light"}
         style={{
+          filter: theme ? "invert(1)" : "invert(0)",
           background: theme ? "#ffffff42" : "",
-          color: theme ? "white" : "",
+          color: theme ? "#fff" : "",
           border: theme ? "1px solid #dddddd0d" : "1px solid  #e0dada",
         }}
         autoComplete="off"
@@ -65,16 +66,16 @@ function Search() {
         <span>Search</span>
       </div>
       {load ? (
-        <div
-          className="spinner-grow spinner-grow-sm loading-search"
+        <img
+          src={LoadingImg}
+          alt="loading"
+          className="loading-search"
           role="status"
-        >
-          <span className="sr-only">Loading...</span>
-        </div>
+        />
       ) : (
         <div
           className="close_search"
-          style={{ display: search ? "block" : "none" }}
+          style={{ display: search ? "block" : "none", color: "crimson" }}
           onClick={handelClose}
         >
           &times;
@@ -84,7 +85,14 @@ function Search() {
         submit
       </button>
 
-      <div className="users_results">
+      <div
+        className="users_results"
+        style={{
+          filter: theme ? "invert(1)" : "invert(0)",
+          background: theme ? "#ffffff42" : "",
+          opacity: theme ? 1 : 1,
+        }}
+      >
         {search &&
           users.length > 0 &&
           users.map((user) => (

@@ -25,7 +25,7 @@ function Menu() {
     }
   };
   return (
-    <div className="menu">
+    <div className="menu" style={{ filter: theme ? "invert(1)" : "invert(0)" }}>
       <ul className="navbar-nav flex-row  mb-lg-0">
         {navLinks.map((navlink, i) => (
           <li className={`nav-item px-2 ${isActive(navlink.path)}`} key={i}>
@@ -95,11 +95,7 @@ function Menu() {
               ) : (
                 <>
                   {" "}
-                  <i
-                    className="far fa-sun"
-                    style={{ filter: theme ? "invert(1)" : "invert(0)" }}
-                  ></i>{" "}
-                  light
+                  <i className="far fa-sun"></i> light
                 </>
               )}
             </label>

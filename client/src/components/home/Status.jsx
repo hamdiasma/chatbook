@@ -9,7 +9,7 @@ function Status(props) {
   const dispatch = useDispatch();
   return (
     <div className="status my-3 d-flex align-items-center">
-      <Avatar src={auth.user.avatar} size="small-avatar" />
+      <Avatar src={auth.user.avatar} size="medium-avatar" />
       <button
         onClick={() => dispatch(statusAction(true))}
         className="statusBtn flex-fill"

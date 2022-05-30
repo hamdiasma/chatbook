@@ -1,19 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './styles/global.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import DataProvider from './redux/store';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.js';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./styles/global.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import DataProvider from "./redux/store";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.js";
 
 ReactDOM.render(
-  <React.StrictMode>
+  <React.Fragment>
     <DataProvider>
-    <App />
+      <App />
     </DataProvider>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.Fragment>,
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
