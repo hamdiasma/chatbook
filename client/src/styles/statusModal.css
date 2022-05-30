@@ -1,0 +1,159 @@
+.status_modal {
+    overflow-y: auto;
+
+}
+
+.status_form {
+    position     : fixed;
+    top          : 10px;
+    left         : 50%;
+    transform    : translateX(-50%);
+    background   : white;
+    z-index      : 10;
+    max-width    : 400px;
+    width        : 100%;
+    padding      : 20px;
+    border       : 5px;
+    box-shadow   : 0 0 5px grey;
+    border-radius: 5px;
+
+}
+
+.status_header {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    border-bottom  : 1px solid #ddd;
+    margin-bottom  : 10px;
+}
+
+.status_header span {
+    font-size  : 2rem;
+    font-weight: 900;
+    cursor     : pointer;
+    transform  : translateY(-7px);
+    color      : crimson;
+}
+
+/* .status_body {
+    overflow-y: auto;
+    max-height: 400px;
+    height    : 400px;
+} */
+
+.status_body textarea {
+    width        : 100%;
+    padding      : 5px;
+    min-height   : 150px;
+    /* border    : 1px solid #ccc; */
+    border       : none;
+    outline      : none;
+    resize       : none;
+}
+
+.status_body .input_images {
+    display        : flex;
+    justify-content: center;
+}
+
+.status_body .show_images {
+    max-height              : 270px;
+    width                   : 100%;
+    overflow-y              : auto;
+    overflow-x              : hidden;
+    display                 : grid;
+    grid-template-columns   : repeat(auto-fill, minmax(110px, 1fr));
+    place-items             : center;
+    /* padding              : 10px 0;
+    margin                  : 5px 0; */
+}
+
+.status_body .show_images #file_img {
+    position: relative;
+    width   : 98%;
+    height  : 98%;
+}
+
+.status_body .show_images #file_img video,
+.status_body .show_images #file_img img {
+    display   : block;
+    object-fit: cover;
+    width     : 100%;
+    height    : 100%;
+    max-height: 120px;
+}
+
+.status_body .show_images #file_img span {
+    text-align   : center;
+    position     : absolute;
+    top          : -2px;
+    right        : -2px;
+    font-size    : 1rem;
+    font-weight  : 900;
+    cursor       : pointer;
+    color        : crimson;
+    background   : #fff;
+    height       : 25px;
+    width        : 25px;
+    border-radius: 50%;
+    line-height  : 25px;
+    border       : 1px solid #ccc;
+    transition   : all .3s ease-in-out;
+}
+
+.status_body .show_images #file_img span:hover {
+    color     : #fff;
+    background: crimson;
+    border    : 1px solid crimson;
+
+}
+
+.status_body i {
+    font-size: 2rem;
+    cursor   : pointer;
+}
+
+.status_body .file_upload {
+    overflow: hidden;
+    margin  : 0 10px;
+    position: relative;
+}
+
+.status_body .file_upload #file {
+    position: absolute;
+    top     : 0;
+    left    : 0;
+    opacity : 0;
+}
+
+
+
+.status_footer {
+    display: flex;
+}
+
+.status_body .stream {
+    position: relative;
+}
+
+.status_body .stream i {
+    position        : absolute;
+    top             : 0;
+    right           : 0;
+    font-weight     : 600;
+    font-size       : 16px;
+    background-color: #ccc;
+    color           : crimson;
+    border-radius   : 50%;
+    padding         : 2px;
+}
+
+.status_body .dropdown-menu.show {
+    transform: translate3D(-127px, -227px, 0px) !important;
+}
+
+/* @media (max-width:567px) {
+    .status_form {
+        max-width: 95%;
+    }
+} */

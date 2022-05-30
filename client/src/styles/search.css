@@ -1,0 +1,120 @@
+.header .search-form {
+    position: relative;
+}
+
+.header .search-form #search {
+    background   : var(--white);
+    border       : 1px solid #ddd;
+    min-width    : 450px;
+    width        : 100%;
+    outline      : none;
+    text-indent  : 5px;
+    border-radius: 3px;
+    padding      : 3px 2px;
+    border-radius: 6px;
+}
+
+.header .search-form .search-light {
+    filter: invert(0);
+}
+
+.header .search-form .search-darck {
+    filter: invert(1);
+}
+
+.header .search-form .search_icon {
+    position      : absolute;
+    top           : 50%;
+    left          : 50%;
+    transform     : translate(-50%, -50%);
+    font-size     : 12px;
+    pointer-events: none;
+    display       : flex;
+}
+
+.header .search-form .search_icon i.fas.fa-search {
+    font-size: 14px;
+    transform: translateY(3px);
+}
+
+.header .search-form .close_search {
+    position   : absolute;
+    top        : 50%;
+    transform  : translateY(-50%);
+    right      : 5px;
+    font-weight: 900;
+    color      : var(--active-link);
+    cursor     : pointer;
+    font-size  : 20px;
+}
+
+.header .loading-search {
+    position: absolute;
+    top     : 24%;
+    right   : 5px;
+    color   : #858585;
+    z-index : 3;
+    width   : 20px;
+}
+
+/* users_results */
+.header .search-form .users_results {
+    position  : absolute;
+    min-width : 250px;
+    width     : 100%;
+    background: #fff;
+    max-height: calc(50vh - 10px);
+    overflow-y: auto;
+}
+
+.header .search-form .users_results .userItem:hover {
+    background: rgb(170, 215, 243);
+}
+
+.header .search-form .users_results::-webkit-scrollbar {
+    width        : 6px;
+    height       : 100px;
+    border-radius: 10px;
+}
+
+/* Track */
+.header .search-form .users_results::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    box-shadow: inset 0 0 5px grey;
+}
+
+/* Handle */
+.header .search-form .users_results::-webkit-scrollbar-thumb {
+    background   : #888;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+.header .search-form .users_results::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+
+
+
+
+
+
+
+/* responsive */
+@media (max-width:786px) {
+
+    .header .search-form {
+        width   : 90%;
+        margin  : auto;
+        position: relative;
+        z-index : 100;
+    }
+
+    .header .search-form #search {
+        min-width: 100%;
+    }
+}
+
+/* responsive */

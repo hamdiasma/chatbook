@@ -1,0 +1,76 @@
+.comment-input {
+    display    : flex;
+    align-items: center;
+}
+
+.comment-input input {
+    background   : #fff;
+    /* border    : none; */
+    outline      : none;
+    flex         : 1 1;
+    overflow     : auto;
+    border-radius: 5px;
+    padding      : 6px;
+    margin-right : 2px;
+    border       : 1px solid #c9c2c2;
+}
+
+.comment-input .postBtn {
+    outline    : none;
+    background : #f7f7f7;
+    color      : gray;
+    font-weight: bold;
+    position   : relative;
+}
+
+
+.comment-input .dropdown-menu.show {
+    transform: translate3D(-69px, -238px, 0px) !important;
+}
+
+/* ---------comments--------*/
+
+.comment_display {
+    padding: 10px 25px;
+}
+
+
+.comment_card .comment_content {
+    background            : #eee;
+    padding               : 7px;
+    border-radius         : 10px;
+    border-top-left-radius: 0;
+    display               : flex;
+    justify-content       : space-between;
+    align-items           : flex-start;
+}
+
+.comment_card .comment_content .readMore {
+    cursor: pointer;
+    color : crimson;
+}
+
+
+.comment_card .comment_content .nav-item {
+    cursor    : pointer;
+    opacity   : 0.5;
+    transition: hover .3s ease-in-out;
+}
+
+.comment_card .comment_content:hover .nav-item {
+    opacity: 1;
+}
+
+.comment_card .comment_content .dropdown-menu {
+    position: absolute;
+    right   : 0;
+    left    : inherit;
+}
+
+.comment_card .comment_content textarea {
+    width     : 100%;
+    border    : none;
+    outline   : none;
+    background: #FFF;
+    padding   : 10px;
+}
