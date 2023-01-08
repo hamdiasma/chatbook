@@ -6,9 +6,10 @@ import Emojie from "../../emoji/Emojie";
 
 function InputComment({ children, post, onReply, setOnReply }) {
   const [content, setContent] = useState("");
+  // @ts-ignore
   const { auth, socket, theme } = useSelector((state) => state);
   const dispatch = useDispatch();
-  const handelSubmit = (e) => {
+  const handelSubmit = (/** @type {React.MouseEvent<HTMLButtonElement, MouseEvent>} */ e) => {
     e.preventDefault();
     if (!content.trim()) {
       if (setOnReply) return setOnReply(false);
